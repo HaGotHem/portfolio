@@ -1,0 +1,221 @@
+/* CSS personnalisé pour le portfolio BTS SIO */
+
+/* Couleurs personnalisées */
+:root {
+    --bs-primary: #0066cc;
+    --bs-primary-dark: #004499;
+    --bs-light-blue: #e3f2fd;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+}
+
+/* Style général */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar personnalisée */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-light-blue) !important;
+}
+
+/* Section Accueil */
+#accueil {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--bs-light-blue) 0%, white 100%);
+}
+
+.display-4 {
+    background: linear-gradient(45deg, var(--bs-primary), #0099ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Cartes des compétences */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Icônes des compétences */
+.bi-code-square,
+.bi-bootstrap,
+.bi-database,
+.bi-git {
+    transition: color 0.3s ease;
+}
+
+.card:hover .bi-code-square,
+.card:hover .bi-bootstrap,
+.card:hover .bi-database,
+.card:hover .bi-git {
+    color: var(--bs-primary-dark) !important;
+}
+
+/* Section Projets */
+#projets {
+    background-color: var(--bs-gray-100);
+}
+
+/* Badges des projets */
+.badge {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Formulaire de contact */
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--bs-primary), #0099ff);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--bs-primary-dark), var(--bs-primary));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.btn-outline-primary {
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+}
+
+
+/* Espacement des sections */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--bs-gray-100);
+}
+
+
+
+/* Style pour les icônes dans les sections */
+.section-icon {
+    margin-bottom: 1rem;
+    color: var(--bs-primary);
+}
+
+/* Style général du body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Amélioration de la lisibilité */
+.lead {
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Style des cartes de projets */
+.card-title {
+    color: var(--bs-primary);
+    font-weight: 600;
+}
+
+/* Animation des éléments au survol */
+.card-body {
+    transition: all 0.3s ease;
+}
+
+/* Style pour le formulaire */
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Amélioration du contraste */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Style pour les sections */
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Animation douce pour tous les éléments */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Bouton remonter en haut */
+#backToTop {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: right;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    border: none;
+    background: linear-gradient(45deg, var(--bs-primary), #0099ff);
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#backToTop:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+    background: linear-gradient(45deg, var(--bs-primary-dark), var(--bs-primary));
+}
+
+#backToTop:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.25);
+}
+
+/* Animation d'apparition */
+#backToTop.show {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
