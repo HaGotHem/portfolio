@@ -1,0 +1,70 @@
+// Source unique de tous les projets du portfolio (séparation données / affichage).
+// - La page Réalisations affiche tous les projets.
+// - La page Projets/Stage n'affiche que les projets scolaires (scolaire: true).
+export const PROJETS = [
+  {
+    title: "Portfolio personnel",
+    desc: "Conception et développement complet de ce portfolio en React : interface moderne en thème sombre, fond animé, typographie personnalisée, navigation avec React Router et composants réutilisables. En cours de développement.",
+    tech: ["React", "Vite", "TailwindCSS", "Motion"],
+    category: "Web",
+    year: "2026",
+    featured: true,
+    scolaire: false,
+  },
+  {
+    title: "CRM Club Volley",
+    desc: "Application web CRM développée pour un club de volley-ball. Architecture MVC avec Slim 4, Repositories pour l'accès aux données, intégration API Weezevent pour la synchronisation des participants et API Brevo pour l'envoi de newsletters. Interface d'administration avec templates Twig, déploiement conteneurisé Docker. J'ai réalisé la partie front-end.",
+    tech: ["PHP 8", "Slim 4", "PostgreSQL", "Docker", "Twig", "API REST", "Guzzle"],
+    category: "Web",
+    year: "2025",
+    scolaire: true,
+  },
+  {
+    title: "Chess Move Visualizer (ChesSIO)",
+    desc: "Application web de visualisation des mouvements aux échecs développée sans framework. Échiquier 8×8 généré dynamiquement, calcul algorithmique des coups possibles pour chaque type de pièce, détection d'échec et mat, gestion des captures et alternance des tours, historique avec notation échiquéenne.",
+    tech: ["JavaScript ES6+", "HTML5", "CSS3"],
+    category: "Jeu",
+    year: "2025",
+    scolaire: true,
+  },
+  {
+    title: "TechShop — Site E-commerce",
+    desc: "Site e-commerce moderne pour la vente de produits technologiques. 4 pages complètes, mode sombre/clair avec sauvegarde des préférences, panier persistant via localStorage, filtres par catégorie et par prix, pagination, validation de formulaire en temps réel et animations fluides au scroll.",
+    tech: ["HTML5", "CSS3", "JavaScript ES6+", "Bootstrap 5.3", "Anime.js"],
+    category: "Web",
+    year: "2025",
+    scolaire: true,
+  },
+  {
+    title: "Santa's Workshop Manager",
+    desc: "Application de gestion de liste de cadeaux de Noël avec CRUD complet. Formulaire d'ajout avec catégories et statuts (À fabriquer, En cours, Livré), filtres dynamiques, modales de confirmation pour les actions destructives, barre de progression et persistance localStorage.",
+    tech: ["HTML5", "CSS3", "JavaScript ES6+", "Bootstrap 5.3"],
+    category: "Web",
+    year: "2025",
+    scolaire: true,
+  },
+  {
+    title: "Booki — Intégration Web Responsive",
+    desc: "Intégration pixel-perfect de la page d'accueil d'un site de réservation d'hébergements à partir de maquettes Figma. Structure HTML sémantique, responsive design sur 3 breakpoints (desktop, tablette, mobile), cartes réutilisables, formulaire de recherche avec filtres et code validé W3C.",
+    tech: ["HTML5 sémantique", "CSS3", "Flexbox", "Grid", "Media Queries"],
+    category: "Intégration",
+    year: "2025",
+    scolaire: true,
+  },
+  {
+    title: "IRIS-Space — Refonte du Site École",
+    desc: "Projet collaboratif de refonte du site web de l'école IRIS. Système d'authentification, interface d'administration, build optimisé avec Vite, styles avec Tailwind CSS et DaisyUI, gestion de version collaborative avec Git/GitHub. J'ai réalisé la partie front-end.",
+    tech: ["HTML5", "Tailwind CSS", "DaisyUI", "Vite", "JavaScript ES6+"],
+    category: "Web",
+    year: "2025",
+    scolaire: true,
+  },
+  {
+    title: "Formulaire d'Inscription Avancé",
+    desc: "Formulaire d'inscription complet avec validation côté client par expressions régulières : email, téléphone français, code postal, mot de passe fort avec indicateur de force, vérification de l'âge (18 ans minimum), confirmation de mot de passe et feedback visuel immédiat.",
+    tech: ["HTML5", "CSS3", "JavaScript ES6+"],
+    category: "Web",
+    year: "2025",
+    scolaire: true,
+  },
+];

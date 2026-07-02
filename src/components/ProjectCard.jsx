@@ -1,0 +1,57 @@
+import { motion } from "motion/react";
+import { fadeInUp } from "@/lib/animations";
+import { slugify } from "@/lib/utils";
+import TechTags from "@/components/TechTags";
+
+// Carte d'un projet, réutilisée sur les pages Projets/Stage et Réalisations.
+// Le projet "mis en avant" (featured) occupe toute la largeur et a un style distinct.
+const ProjectCard = ({ project, index = 0 }) => {
+  const { title, desc, tech, category, year, featured } = project;
+
+  return (
+    <motion.article
+      id={slugify(title)}
+      {...fadeInUp(index * 0.1)}
+      className={`flex scroll-mt-28 flex-col gap-4 rounded-2xl border p-6 transition-colors duration-200 ${
+        featured
+          ? "border-[rgba(120,243,210,0.22)] bg-[rgba(120,243,210,0.04)] lg:col-span-2"
+          : "border-white/10 bg-white/4 hover:border-white/18 hover:bg-white/7"
+      }`}
+    >
+      {/* En-tête : catégorie + année */}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-2.5">
+          <span className="rounded-full border border-white/15 px-2.5 py-0.5 text-[0.6rem] uppercase tracking-[0.15em] text-white/50">
+            {category}
+          </span>
+          {featured && (
+            <span className="text-[0.6rem] uppercase tracking-[0.15em] text-[#78f3d2]/60">
+              Projet principal
+            </span>
+          )}
+        </div>
+        <span className="text-[0.6rem] uppercase tracking-[0.15em] text-white/30">
+          {year}
+        </span>
+      </div>
+
+      {/* Titre + description */}
+      <div>
+        <h2
+          className={`mb-2 font-medium leading-tight text-[#efebe4] ${
+            featured ? "font-fraunces text-2xl md:text-3xl" : "text-lg"
+          }`}
+        >
+          {title}
+        </h2>
+        <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.72)]">
+          {desc}
+        </p>
+      </div>
+
+      <TechTags tech={tech} />
+    </motion.article>
+  );
+};
+
+export default ProjectCard;
