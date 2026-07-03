@@ -14,8 +14,8 @@ const ProjectCard = ({ project, index = 0 }) => {
       {...fadeInUp(index * 0.1)}
       className={`flex scroll-mt-28 flex-col gap-4 rounded-2xl border p-6 transition-colors duration-200 ${
         featured
-          ? "border-[rgba(120,243,210,0.22)] bg-[rgba(120,243,210,0.04)] lg:col-span-2"
-          : "border-white/10 bg-white/4 hover:border-white/18 hover:bg-white/7"
+          ? "border-[rgba(120,243,210,0.22)] bg-[rgba(120,243,210,0.18)] lg:col-span-2"
+          : "border-white/20 bg-white/14 hover:border-white/18 hover:bg-white/25"
       }`}
     >
       {/* En-tête : catégorie + année */}
