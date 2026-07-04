@@ -40,16 +40,10 @@ const Realisation = () => {
 
   return (
     <section className="py-10 md:py-14">
-      <p className="home-hero__eyebrow">— Skills</p>
       <h1 className="page-title">
         Mes <em>Compétences</em>
       </h1>
       <section className="py-10 md:py-14">
-        <p className="home-hero__eyebrow">— BTS SIO SLAM</p>
-        <h1 className="page-title">
-          Tableau de <em>compétences</em> / synthèse
-        </h1>
-
         {/* Barres de compétences par catégorie */}
         <div className="mb-14">
           <p className="section-label">Compétences techniques</p>
