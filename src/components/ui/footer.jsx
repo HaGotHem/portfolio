@@ -5,7 +5,7 @@ const links = [
       {
         title: "Présentation",
         href: "/#home-hero",
-      }
+      },
     ],
   },
   {
@@ -55,7 +55,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border border-white/25 bg-white/10 pt-20 text-white backdrop-blur-2xl backdrop-saturate-150 shadow-[0_10px_30px_rgba(0,0,0,0.35)] rounded-2xl mt-auto mx-auto self-center mb-6 max-w-5xl">
+    <footer className="border border-white/25 bg-white/10 pt-20 text-white backdrop-blur-2xl backdrop-saturate-150 shadow-[0_10px_30px_rgba(0,0,0,0.35)] rounded-2xl mt-auto mx-auto self-center mb-6 mx-auto px-6">
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2">
