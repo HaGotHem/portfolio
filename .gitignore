@@ -1,4 +1,13 @@
 node_modules
 
+# Storybook
 *storybook.log
 storybook-static
+.storybook
+*.stories.jsx
+
+# Claude
+.claude
+
+# graphify
+graphify-out
