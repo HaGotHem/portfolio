@@ -1,12 +1,5 @@
 import { motion } from "motion/react";
 import { fadeInUp } from "@/lib/animations";
-import { PROJETS } from "@/data/projets";
-import ProjectCard from "@/components/ProjectCard";
-import Footer from "../components/ui/footer.jsx";
-import TechTags from "@/components/TechTags";
-
-// On n'affiche ici que les projets réalisés dans le cadre du BTS.
-const PROJETS_SCOLAIRES = PROJETS.filter((projet) => projet.scolaire);
 
 const Stage = () => (
   <section className="py-10 md:py-14">

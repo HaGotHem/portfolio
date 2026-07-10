@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { Mail, Github, Phone, Send } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 import { fadeInUp } from "@/lib/animations";
-import Footer from "../components/ui/footer.jsx";
 
 const FORMSPREE_ID = "mgojrorg";
 
@@ -69,7 +68,7 @@ const Contact = () => {
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="flex flex-col gap-1.5">
-                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/38">
+                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/62">
                   Nom
                 </label>
                 <input
@@ -81,7 +80,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/38">
+                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/62">
                   Email
                 </label>
                 <input
@@ -101,7 +100,7 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/38">
+              <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/62">
                 Message
               </label>
               <textarea
@@ -143,7 +142,7 @@ const Contact = () => {
             >
               <link.icon size={15} className="shrink-0 text-[#78f3d2]/65" />
               <div>
-                <p className="text-[0.6rem] uppercase tracking-[0.12em] text-white/32">
+                <p className="text-[0.6rem] uppercase tracking-[0.12em] text-white/60">
                   {link.label}
                 </p>
                 <p className="text-xs text-[rgba(232,229,223,0.7)]">

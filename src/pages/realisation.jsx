@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { PROJETS } from "@/data/projets";
 import { SKILL_CATEGORIES } from "@/data/competences";
 import ProjectCard from "@/components/ProjectCard";
-import Footer from "../components/ui/footer.jsx";
 import { fadeInUp } from "@/lib/animations";
 import { motion } from "motion/react";
 
@@ -14,7 +13,7 @@ const SkillBar = ({ name, level, icon: Icon, delay }) => (
         {Icon && <Icon size={15} className="shrink-0 text-[#78f3d2]/80" />}
         {name}
       </span>
-      <span className="text-[0.62rem] text-white/35">{level} %</span>
+      <span className="text-[0.62rem] text-white/60">{level} %</span>
     </div>
     {/* Barre de progression animée au scroll */}
     <div className="h-1 overflow-hidden rounded-full bg-white/8">
@@ -54,7 +53,7 @@ const Realisation = () => {
                 {...fadeInUp(ci * 0.08)}
                 className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/4 p-5"
               >
-                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/62">
                   {cat.label}
                 </h3>
                 <div className="flex flex-col gap-3">
@@ -80,7 +79,7 @@ const Realisation = () => {
           >
             <table className="w-full min-w-[640px] border-collapse text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-[0.62rem] uppercase tracking-[0.12em] text-white/38">
+                <tr className="border-b border-white/10 text-[0.62rem] uppercase tracking-[0.12em] text-white/60">
                   <th className="px-5 py-3 font-semibold">Projet</th>
                   <th className="px-5 py-3 font-semibold">Catégorie</th>
                   <th className="px-5 py-3 font-semibold">Technologies</th>
@@ -114,9 +113,9 @@ const Realisation = () => {
         </div>
       </section>
       <p className="home-hero__eyebrow">— Travaux réalisés</p>
-      <h1 className="page-title">
+      <h2 className="page-title">
         Mes <em>réalisations</em>
-      </h1>
+      </h2>
 
       <div className="grid gap-5 lg:grid-cols-2">
         {PROJETS.map((projet, i) => (

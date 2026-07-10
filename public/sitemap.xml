@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Remplacer les <loc> par l'URL absolue de production une fois le domaine connu (le sitemap XML exige des URLs absolues) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc></url>
+  <url><loc>/stage</loc></url>
+  <url><loc>/realisation</loc></url>
+  <url><loc>/tabskill</loc></url>
+  <url><loc>/veille</loc></url>
+  <url><loc>/cv</loc></url>
+  <url><loc>/contact</loc></url>
+</urlset>

@@ -1,5 +1,4 @@
-import { TextEffect } from "../../components/motion-primitives/text-effect.tsx";
-import Footer from "../components/ui/footer.jsx";
+import { TextEffect } from "../components/motion-primitives/text-effect.tsx";
 
 const Home = () => {
   return (

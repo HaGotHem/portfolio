@@ -15,7 +15,7 @@ export default defineConfig([globalIgnores(['dist']), {
     reactRefresh.configs.vite,
   ],
   languageOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
     globals: globals.browser,
     parserOptions: {
       ecmaVersion: 'latest',
@@ -24,6 +24,6 @@ export default defineConfig([globalIgnores(['dist']), {
     },
   },
   rules: {
-    'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    'no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
   },
 }, ...storybook.configs["flat/recommended"]])

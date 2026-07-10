@@ -179,7 +179,7 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(232, 229, 223, 0.5);
+  color: rgba(232, 229, 223, 0.62);
 }
 
 .home-hero__grid {
@@ -321,6 +321,25 @@ body {
   font-display: swap;
 }
 
+/* Lien d'évitement : visible uniquement au focus clavier */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: #efebe4;
+  color: #0f161e;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* ── Styles partagés entre pages ─────────────────────── */
 
 .page-title {
@@ -344,7 +363,7 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(232, 229, 223, 0.4);
+  color: rgba(232, 229, 223, 0.62);
   margin-bottom: 1.2rem;
 }
 
