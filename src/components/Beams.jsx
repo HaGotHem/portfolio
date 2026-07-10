@@ -8,7 +8,7 @@ import {
 
 import * as THREE from "three";
 
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 
 function extendMaterial(BaseMaterial, cfg) {
@@ -58,8 +58,31 @@ function extendMaterial(BaseMaterial, cfg) {
   return mat;
 }
 
+// Cape le rendu à ~30 fps au lieu de suivre le taux de rafraîchissement de
+// l'écran (souvent 60-144 Hz) : ce fond n'a pas besoin de plus pour paraître
+// fluide, et ça divise le coût GPU du fragment shader par ~2.
+const FpsLimiter = ({ fps = 30 }) => {
+  const invalidate = useThree((state) => state.invalidate);
+  useEffect(() => {
+    const interval = 1000 / fps;
+    let timeoutId;
+    const tick = () => {
+      invalidate();
+      timeoutId = setTimeout(tick, interval);
+    };
+    tick();
+    return () => clearTimeout(timeoutId);
+  }, [fps, invalidate]);
+  return null;
+};
+
 const CanvasWrapper = ({ children }) => (
-  <Canvas dpr={[1, 2]} frameloop="always" className="w-full h-full relative">
+  <Canvas
+    dpr={[1, 1.5]}
+    frameloop="demand"
+    className="w-full h-full relative"
+  >
+    <FpsLimiter />
     {children}
   </Canvas>
 );
@@ -152,7 +175,7 @@ float cnoise(vec3 P){
 const Beams = ({
   beamWidth = 2,
   beamHeight = 15,
-  beamNumber = 12,
+  beamNumber = 8,
   lightColor = "#ffffff",
   speed = 2,
   noiseIntensity = 1.75,
@@ -297,7 +320,7 @@ const MergedPlanes = forwardRef(({ material, width, count, height }, ref) => {
   const mesh = useRef(null);
   useImperativeHandle(ref, () => mesh.current);
   const geometry = useMemo(
-    () => createStackedPlanesBufferGeometry(count, width, height, 0, 100),
+    () => createStackedPlanesBufferGeometry(count, width, height, 0, 48),
     [count, width, height],
   );
   useFrame((_, delta) => {
