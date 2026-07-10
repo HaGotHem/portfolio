@@ -7,12 +7,28 @@ const Background = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(
     () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
+  // Onglet en arrière-plan = démonte le canvas WebGL (coupe tout rendu GPU)
+  // plutôt que de continuer à animer un fond invisible.
+  const [isVisible, setIsVisible] = useState(
+    () => document.visibilityState === "visible",
+  );
 
   useEffect(() => {
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
     const handleChange = (event) => setPrefersReducedMotion(event.matches);
     query.addEventListener("change", handleChange);
     return () => query.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
+    const handleVisibilityChange = () =>
+      setIsVisible(document.visibilityState === "visible");
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () =>
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange,
+      );
   }, []);
 
   return (
@@ -28,11 +44,11 @@ const Background = () => {
         background: prefersReducedMotion ? "#0f161e" : undefined,
       }}
     >
-      {!prefersReducedMotion && (
+      {!prefersReducedMotion && isVisible && (
         <Beams
           beamWidth={2}
           beamHeight={15}
-          beamNumber={12}
+          beamNumber={8}
           lightColor="#ffffff"
           speed={2}
           noiseIntensity={1.75}
