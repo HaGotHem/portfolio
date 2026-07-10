@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { ChevronDown, FolderKanban } from "lucide-react";
 import logo from "@/assets/logo.svg";
@@ -59,10 +59,14 @@ const Navbar = () => {
     }
   }, [location.pathname]);
 
-  useEffect(() => {
+  // Ferme les menus au changement de page. Calculé pendant le rendu (plutôt
+  // que dans un effet) pour éviter un rendu en cascade évitable.
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
+  if (location.pathname !== prevPathname) {
+    setPrevPathname(location.pathname);
     setIsMenuOpen(false);
     setIsProjetsOpen(false);
-  }, [location.pathname]);
+  }
 
   // Closes the dropdown on outside click or Escape while it's open.
   useEffect(() => {
@@ -132,7 +136,7 @@ const Navbar = () => {
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_120%_at_20%_0%,rgba(255,255,255,0.38)_0%,rgba(255,255,255,0.10)_38%,rgba(255,255,255,0.00)_70%)]" />
             <img
               src={logo}
-              alt="logo"
+              alt="Logo Thomas Bertacchi"
               className="relative z-10 h-6 w-6 opacity-95 transition group-hover:opacity-100"
             />
             <p className="hidden text-sm font-semibold tracking-wide text-white/90  md:block">
@@ -183,31 +187,46 @@ const Navbar = () => {
           ))}
 
           <div
+            ref={projetsBtnRef}
             onMouseEnter={openProjetsMenu}
             onMouseLeave={scheduleCloseProjetsMenu}
+            onFocus={openProjetsMenu}
+            aria-current={isProjetsActive ? "page" : undefined}
+            className={`relative z-10 flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold transition-colors duration-300 md:px-4 md:text-base ${
+              isProjetsActive ? "text-white" : "text-white/80 hover:text-white"
+            }`}
           >
             <NavLink
-              ref={projetsBtnRef}
               to="/realisation"
               aria-haspopup="true"
               aria-expanded={isProjetsOpen}
-              aria-current={isProjetsActive ? "page" : undefined}
-              className={`relative z-10 flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold transition-colors duration-300 outline-none md:px-4 md:text-base ${
-                isProjetsActive ? "text-white" : "text-white/80 hover:text-white"
-              }`}
+              aria-controls="projets-panel"
+              className="outline-none"
             >
               Projets / Réalisations
+            </NavLink>
+            <button
+              type="button"
+              aria-label={
+                isProjetsOpen
+                  ? "Réduire la liste des projets"
+                  : "Déplier la liste des projets"
+              }
+              aria-expanded={isProjetsOpen}
+              aria-controls="projets-panel"
+              className="flex items-center justify-center outline-none"
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                toggleProjetsMenu();
+              }}
+            >
               <ChevronDown
                 className={`h-4 w-4 transition-transform duration-200 ${
                   isProjetsOpen ? "rotate-180" : ""
                 }`}
-                onClick={(event) => {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  toggleProjetsMenu();
-                }}
               />
-            </NavLink>
+            </button>
           </div>
 
           {linksAfter.map((link) => (
@@ -224,6 +243,7 @@ const Navbar = () => {
 
         {isProjetsOpen && projetsMenuPos && (
           <div
+            id="projets-panel"
             ref={projetsMenuRef}
             onMouseEnter={openProjetsMenu}
             onMouseLeave={scheduleCloseProjetsMenu}

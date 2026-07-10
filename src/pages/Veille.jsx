@@ -1,44 +1,13 @@
 import { motion } from "motion/react";
-import { Cpu, Rss, BookOpen, Tags } from "lucide-react";
+import { Cpu, BookOpen } from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
-import TechTags from "@/components/TechTags";
-import Footer from "../components/ui/footer.jsx";
-
-// ── Données ────────────────────────────────────────────
-
-const SOURCES = [
-  "Feedly (agrégateur RSS)",
-  "Google Alerts",
-  "Tom's Hardware",
-  "Next",
-  "Clubic",
-  "Ars Technica",
-  "The Verge",
-  "Newsroom TSMC",
-  "Newsroom Intel",
-  "Newsroom ASML",
-  "YouTube — Asianometry",
-  "YouTube — der8auer",
-];
-
-const TERMES_CLES = [
-  "Transistor",
-  "Nanomètre",
-  "Effet tunnel",
-  "FinFET / GAA",
-  "EUV",
-  "Chiplet / 3D stacking",
-  "Graphène",
-  "Informatique quantique",
-  "More than Moore",
-];
 
 // ── Sous-composants ────────────────────────────────────
 
 const SectionHeader = ({ icon: Icon, title }) => (
   <div className="mb-4 flex items-center gap-2.5">
     <Icon size={13} className="text-[#78f3d2]/65" />
-    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.4)]">
+    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.62)]">
       {title}
     </p>
   </div>

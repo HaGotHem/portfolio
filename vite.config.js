@@ -17,6 +17,20 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src")
     }
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (
+            id.includes("node_modules/three") ||
+            id.includes("node_modules/@react-three")
+          ) {
+            return "three";
+          }
+        },
+      },
+    },
+  },
   test: {
     projects: [{
       extends: true,

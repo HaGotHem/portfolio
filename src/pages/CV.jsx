@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { Download, GraduationCap, Briefcase, Code2, Globe, Sparkles } from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
 import TechTags from "@/components/TechTags";
-import Footer from "@/components/ui/footer";
 
 // ── Données ────────────────────────────────────────────
 
@@ -57,7 +56,7 @@ const QUALITES = [
 const SectionHeader = ({ icon: Icon, title }) => (
   <div className="mb-5 flex items-center gap-2.5">
     <Icon size={13} className="text-[#78f3d2]/65" />
-    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.4)]">
+    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.62)]">
       {title}
     </p>
   </div>
@@ -112,7 +111,7 @@ const CV = () => (
                     <h3 className="text-sm font-semibold text-[#efebe4]">
                       {f.title}
                     </h3>
-                    <span className="text-[0.62rem] uppercase tracking-[0.12em] text-white/32">
+                    <span className="text-[0.62rem] uppercase tracking-[0.12em] text-white/60">
                       {f.period}
                     </span>
                   </div>
@@ -138,7 +137,7 @@ const CV = () => (
               <h3 className="mb-1 text-sm font-semibold text-[rgba(232,229,223,0.55)]">
                 En recherche d&apos;un stage
               </h3>
-              <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.45)]">
+              <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.62)]">
                 Stage de 4 semaines en développement web — disponible entre
                 juillet et août 2026.
               </p>
@@ -179,7 +178,7 @@ const CV = () => (
                 <span className="text-sm text-[rgba(232,229,223,0.72)]">
                   {l.lang}
                 </span>
-                <span className="rounded-full border border-white/10 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.12em] text-white/38">
+                <span className="rounded-full border border-white/10 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.12em] text-white/60">
                   {l.level}
                 </span>
               </div>

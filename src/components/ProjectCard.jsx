@@ -30,7 +30,7 @@ const ProjectCard = ({ project, index = 0 }) => {
             </span>
           )}
         </div>
-        <span className="text-[0.6rem] uppercase tracking-[0.15em] text-white/30">
+        <span className="text-[0.6rem] uppercase tracking-[0.15em] text-white/60">
           {year}
         </span>
       </div>
