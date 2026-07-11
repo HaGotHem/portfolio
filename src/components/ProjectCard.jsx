@@ -6,7 +6,7 @@ import TechTags from "@/components/TechTags";
 // Carte d'un projet, réutilisée sur les pages Projets/Stage et Réalisations.
 // Le projet "mis en avant" (featured) occupe toute la largeur et a un style distinct.
 const ProjectCard = ({ project, index = 0 }) => {
-  const { title, desc, tech, category, year, featured } = project;
+  const { title, desc, tech, category, year, featured, linked, url, urlrepo } = project;
 
   return (
     <motion.article
@@ -48,6 +48,30 @@ const ProjectCard = ({ project, index = 0 }) => {
           {desc}
         </p>
       </div>
+      {linked && (
+        <div className="flex flex-wrap gap-3">
+          {urlrepo && (
+            <a
+              href={urlrepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/28 px-3.5 py-1.5 text-xs text-[#efebe4]/85 transition-colors duration-200 hover:border-white/45 hover:text-[#efebe4]"
+            >
+              Voir le repo
+            </a>
+          )}
+          {url && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/28 px-3.5 py-1.5 text-xs text-[#efebe4]/85 transition-colors duration-200 hover:border-white/45 hover:text-[#efebe4]"
+            >
+              Voir la page
+            </a>
+          )}
+        </div>
+      )}
 
       <TechTags tech={tech} />
     </motion.article>
