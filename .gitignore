@@ -6,12 +6,6 @@ coverage
 .env
 .env.*
 
-# Storybook
-*storybook.log
-storybook-static
-.storybook
-*.stories.jsx
-
 # Claude
 .claude
 

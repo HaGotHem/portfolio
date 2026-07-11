@@ -51,12 +51,12 @@ const Contact = () => {
         {state.succeeded ? (
           <motion.div
             {...fadeInUp(0)}
-            className="flex flex-col items-start justify-center gap-2 rounded-2xl border border-white/10 bg-white/4 p-6 md:p-8"
+            className="flex flex-col items-start justify-center gap-2 rounded-2xl border border-white/16 bg-white/8 p-6 md:p-8"
           >
             <p className="text-sm font-semibold text-[#78f3d2]">
               Message envoyé !
             </p>
-            <p className="text-xs text-[rgba(232,229,223,0.7)]">
+            <p className="text-xs text-[rgba(232,229,223,0.85)]">
               Merci, je vous répondrai dès que possible.
             </p>
           </motion.div>
@@ -64,11 +64,11 @@ const Contact = () => {
           <motion.form
             {...fadeInUp(0)}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5 rounded-2xl border border-white/10 bg-white/4 p-6 md:p-8"
+            className="flex flex-col gap-5 rounded-2xl border border-white/16 bg-white/8 p-6 md:p-8"
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="flex flex-col gap-1.5">
-                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/62">
+                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/78">
                   Nom
                 </label>
                 <input
@@ -80,7 +80,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/62">
+                <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/78">
                   Email
                 </label>
                 <input
@@ -100,7 +100,7 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/62">
+              <label className="text-[0.68rem] uppercase tracking-[0.15em] text-white/78">
                 Message
               </label>
               <textarea
@@ -138,14 +138,14 @@ const Contact = () => {
               href={link.href}
               target={link.href.startsWith("mailto") ? "_self" : "_blank"}
               rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/4 px-4 py-3.5 transition-colors duration-200 hover:border-white/18 hover:bg-white/7"
+              className="flex items-center gap-3 rounded-xl border border-white/16 bg-white/8 px-4 py-3.5 transition-colors duration-200 hover:border-white/24 hover:bg-white/12"
             >
-              <link.icon size={15} className="shrink-0 text-[#78f3d2]/65" />
+              <link.icon size={15} className="shrink-0 text-[#78f3d2]/80" />
               <div>
-                <p className="text-[0.6rem] uppercase tracking-[0.12em] text-white/60">
+                <p className="text-[0.6rem] uppercase tracking-[0.12em] text-white/75">
                   {link.label}
                 </p>
-                <p className="text-xs text-[rgba(232,229,223,0.7)]">
+                <p className="text-xs text-[rgba(232,229,223,0.85)]">
                   {link.value}
                 </p>
               </div>

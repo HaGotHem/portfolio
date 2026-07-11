@@ -378,9 +378,9 @@ body {
 }
 
 .tech-tags li {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-  color: rgba(236, 232, 224, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(236, 232, 224, 0.85);
   border-radius: 999px;
   padding: 0.22rem 0.65rem;
   font-family: "Montserrat", sans-serif;

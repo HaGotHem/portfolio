@@ -56,7 +56,7 @@ const QUALITES = [
 const SectionHeader = ({ icon: Icon, title }) => (
   <div className="mb-5 flex items-center gap-2.5">
     <Icon size={13} className="text-[#78f3d2]/65" />
-    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.62)]">
+    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.78)]">
       {title}
     </p>
   </div>
@@ -98,7 +98,7 @@ const CV = () => (
         {/* Formation */}
         <motion.div
           {...fadeInUp(0)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-6"
+          className="rounded-2xl border border-white/16 bg-white/8 p-6"
         >
           <SectionHeader icon={GraduationCap} title="Formation" />
           <div className="flex flex-col gap-5">
@@ -111,12 +111,12 @@ const CV = () => (
                     <h3 className="text-sm font-semibold text-[#efebe4]">
                       {f.title}
                     </h3>
-                    <span className="text-[0.62rem] uppercase tracking-[0.12em] text-white/60">
+                    <span className="text-[0.62rem] uppercase tracking-[0.12em] text-white/75">
                       {f.period}
                     </span>
                   </div>
-                  <p className="mb-1 text-xs text-[#78f3d2]/60">{f.school}</p>
-                  <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.62)]">
+                  <p className="mb-1 text-xs text-[#78f3d2]/75">{f.school}</p>
+                  <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.8)]">
                     {f.desc}
                   </p>
                 </div>
@@ -128,16 +128,16 @@ const CV = () => (
         {/* Expérience professionnelle */}
         <motion.div
           {...fadeInUp(0.08)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-6"
+          className="rounded-2xl border border-white/16 bg-white/8 p-6"
         >
           <SectionHeader icon={Briefcase} title="Expérience professionnelle" />
           <div className="flex gap-4">
             <div className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/18" />
             <div>
-              <h3 className="mb-1 text-sm font-semibold text-[rgba(232,229,223,0.55)]">
+              <h3 className="mb-1 text-sm font-semibold text-[rgba(232,229,223,0.78)]">
                 En recherche d&apos;un stage
               </h3>
-              <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.62)]">
+              <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.8)]">
                 Stage de 4 semaines en développement web — disponible entre
                 juillet et août 2026.
               </p>
@@ -151,7 +151,7 @@ const CV = () => (
         {/* Compétences techniques */}
         <motion.div
           {...fadeInUp(0.1)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-5"
+          className="rounded-2xl border border-white/16 bg-white/8 p-5"
         >
           <SectionHeader icon={Code2} title="Compétences" />
           <TechTags tech={SKILLS} />
@@ -160,7 +160,7 @@ const CV = () => (
         {/* Qualités */}
         <motion.div
           {...fadeInUp(0.12)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-5"
+          className="rounded-2xl border border-white/16 bg-white/8 p-5"
         >
           <SectionHeader icon={Sparkles} title="Qualités" />
           <TechTags tech={QUALITES} />
@@ -169,16 +169,16 @@ const CV = () => (
         {/* Langues */}
         <motion.div
           {...fadeInUp(0.14)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-5"
+          className="rounded-2xl border border-white/16 bg-white/8 p-5"
         >
           <SectionHeader icon={Globe} title="Langues" />
           <div className="flex flex-col gap-2.5">
             {LANGUES.map((l) => (
               <div key={l.lang} className="flex items-center justify-between">
-                <span className="text-sm text-[rgba(232,229,223,0.72)]">
+                <span className="text-sm text-[rgba(232,229,223,0.88)]">
                   {l.lang}
                 </span>
-                <span className="rounded-full border border-white/10 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.12em] text-white/60">
+                <span className="rounded-full border border-white/16 px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.12em] text-white/75">
                   {l.level}
                 </span>
               </div>
@@ -189,7 +189,7 @@ const CV = () => (
         {/* Centres d'intérêt */}
         <motion.div
           {...fadeInUp(0.18)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-5"
+          className="rounded-2xl border border-white/16 bg-white/8 p-5"
         >
           <SectionHeader icon={Globe} title="Centres d'intérêt" />
           <TechTags tech={INTERETS} />
