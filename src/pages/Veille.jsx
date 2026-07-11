@@ -7,7 +7,7 @@ import { fadeInUp } from "@/lib/animations";
 const SectionHeader = ({ icon: Icon, title }) => (
   <div className="mb-4 flex items-center gap-2.5">
     <Icon size={13} className="text-[#78f3d2]/65" />
-    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.62)]">
+    <p className="mb-0 text-[0.7rem] uppercase tracking-[0.22em] text-[rgba(232,229,223,0.78)]">
       {title}
     </p>
   </div>
@@ -31,10 +31,10 @@ const Veille = () => (
         {/* Synthèse */}
         <motion.div
           {...fadeInUp(0)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-6"
+          className="rounded-2xl border border-white/16 bg-white/8 p-6"
         >
           <SectionHeader icon={Cpu} title="Synthèse" />
-          <div className="flex flex-col gap-4 text-sm leading-relaxed text-[rgba(232,229,223,0.7)]">
+          <div className="flex flex-col gap-4 text-sm leading-relaxed text-[rgba(232,229,223,0.85)]">
             <p>
               présentation de la veille techno
             </p>
@@ -44,10 +44,10 @@ const Veille = () => (
         {/* Pourquoi ça me concerne */}
         <motion.div
           {...fadeInUp(0.08)}
-          className="rounded-2xl border border-white/10 bg-white/4 p-6"
+          className="rounded-2xl border border-white/16 bg-white/8 p-6"
         >
           <SectionHeader icon={BookOpen} title="Pourquoi ça me concerne" />
-          <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.62)]">
+          <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.8)]">
             pourquoi j'ai choisi ce sujet
           </p>
         </motion.div>

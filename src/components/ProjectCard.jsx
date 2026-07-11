@@ -14,23 +14,23 @@ const ProjectCard = ({ project, index = 0 }) => {
       {...fadeInUp(index * 0.1)}
       className={`flex scroll-mt-28 flex-col gap-4 rounded-2xl border p-6 transition-colors duration-200 ${
         featured
-          ? "border-[rgba(120,243,210,0.22)] bg-[rgba(120,243,210,0.18)] lg:col-span-2"
-          : "border-white/20 bg-white/14 hover:border-white/18 hover:bg-white/25"
+          ? "border-[rgba(120,243,210,0.3)] bg-[rgba(120,243,210,0.2)] lg:col-span-2"
+          : "border-white/28 bg-white/18 hover:border-white/32 hover:bg-white/25"
       }`}
     >
       {/* En-tête : catégorie + année */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
-          <span className="rounded-full border border-white/15 px-2.5 py-0.5 text-[0.6rem] uppercase tracking-[0.15em] text-white/50">
+          <span className="rounded-full border border-white/22 px-2.5 py-0.5 text-[0.6rem] uppercase tracking-[0.15em] text-white/68">
             {category}
           </span>
           {featured && (
-            <span className="text-[0.6rem] uppercase tracking-[0.15em] text-[#78f3d2]/60">
+            <span className="text-[0.6rem] uppercase tracking-[0.15em] text-[#78f3d2]/75">
               Projet principal
             </span>
           )}
         </div>
-        <span className="text-[0.6rem] uppercase tracking-[0.15em] text-white/60">
+        <span className="text-[0.6rem] uppercase tracking-[0.15em] text-white/75">
           {year}
         </span>
       </div>
@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index = 0 }) => {
         >
           {title}
         </h2>
-        <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.72)]">
+        <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.88)]">
           {desc}
         </p>
       </div>

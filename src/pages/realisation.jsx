@@ -9,11 +9,11 @@ import { motion } from "motion/react";
 const SkillBar = ({ name, level, icon: Icon, delay }) => (
   <motion.div {...fadeInUp(delay)} className="flex flex-col gap-1.5">
     <div className="flex items-center justify-between">
-      <span className="flex items-center gap-2 text-xs text-[rgba(232,229,223,0.78)]">
+      <span className="flex items-center gap-2 text-xs text-[rgba(232,229,223,0.9)]">
         {Icon && <Icon size={15} className="shrink-0 text-[#78f3d2]/80" />}
         {name}
       </span>
-      <span className="text-[0.62rem] text-white/60">{level} %</span>
+      <span className="text-[0.62rem] text-white/75">{level} %</span>
     </div>
     {/* Barre de progression animée au scroll */}
     <div className="h-1 overflow-hidden rounded-full bg-white/8">
@@ -51,9 +51,9 @@ const Realisation = () => {
               <motion.div
                 key={cat.label}
                 {...fadeInUp(ci * 0.08)}
-                className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/4 p-5"
+                className="flex flex-col gap-4 rounded-2xl border border-white/16 bg-white/8 p-5"
               >
-                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/62">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/78">
                   {cat.label}
                 </h3>
                 <div className="flex flex-col gap-3">
@@ -75,11 +75,11 @@ const Realisation = () => {
           <p className="section-label">Tableau de synthèse des réalisations</p>
           <motion.div
             {...fadeInUp(0.05)}
-            className="overflow-x-auto rounded-2xl border border-white/10 bg-white/4"
+            className="overflow-x-auto rounded-2xl border border-white/16 bg-white/8"
           >
             <table className="w-full min-w-[640px] border-collapse text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-[0.62rem] uppercase tracking-[0.12em] text-white/60">
+                <tr className="border-b border-white/14 text-[0.62rem] uppercase tracking-[0.12em] text-white/75">
                   <th className="px-5 py-3 font-semibold">Projet</th>
                   <th className="px-5 py-3 font-semibold">Catégorie</th>
                   <th className="px-5 py-3 font-semibold">Technologies</th>
@@ -87,22 +87,22 @@ const Realisation = () => {
                   <th className="px-5 py-3 font-semibold">Année</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-white/8">
                 {PROJETS.map((projet) => (
                   <tr key={projet.title}>
-                    <td className="px-5 py-3 font-medium text-[rgba(232,229,223,0.85)]">
+                    <td className="px-5 py-3 font-medium text-[rgba(232,229,223,0.92)]">
                       {projet.title}
                     </td>
-                    <td className="px-5 py-3 text-[rgba(232,229,223,0.62)]">
+                    <td className="px-5 py-3 text-[rgba(232,229,223,0.78)]">
                       {projet.category}
                     </td>
-                    <td className="px-5 py-3 text-[rgba(232,229,223,0.55)]">
+                    <td className="px-5 py-3 text-[rgba(232,229,223,0.72)]">
                       {projet.tech.join(", ")}
                     </td>
-                    <td className="px-5 py-3 text-[rgba(232,229,223,0.62)]">
+                    <td className="px-5 py-3 text-[rgba(232,229,223,0.78)]">
                       {projet.scolaire ? "Scolaire" : "Personnel"}
                     </td>
-                    <td className="px-5 py-3 text-[rgba(232,229,223,0.62)]">
+                    <td className="px-5 py-3 text-[rgba(232,229,223,0.78)]">
                       {projet.year}
                     </td>
                   </tr>

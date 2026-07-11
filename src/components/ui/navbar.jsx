@@ -29,7 +29,7 @@ const Navbar = () => {
     { to: "/stage", label: "Stages" },
   ];
   const linksAfter = [
-    { to: "/tabskill", label: "Compétences / Synthèse" },
+    { to: "/tabskill", label: "Tableau de Synthèse" },
     { to: "/veille", label: "La Veille" },
     { to: "/cv", label: "CV" },
     { to: "/contact", label: "Contact" },
@@ -203,7 +203,7 @@ const Navbar = () => {
               aria-controls="projets-panel"
               className="outline-none"
             >
-              Projets / Réalisations
+              Projets / Réalisations / Compétences
             </NavLink>
             <button
               type="button"
