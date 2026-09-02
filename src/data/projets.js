@@ -31,6 +31,7 @@ export const PROJETS = [
     scolaire: true,
     linked: true,
     urlrepo: "https://github.com/HaGotHem/CRM-Club-Volley",
+    detailUrl: "/crm-volley",
   },
   {
     title: "IRIS-Space — Refonte du Site École",

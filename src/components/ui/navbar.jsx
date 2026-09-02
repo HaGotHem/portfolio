@@ -253,7 +253,7 @@ const Navbar = () => {
             {PROJETS.map((projet) => (
               <NavLink
                 key={projet.title}
-                to={`/realisation#${slugify(projet.title)}`}
+                to={projet.detailUrl ?? `/realisation#${slugify(projet.title)}`}
                 onClick={() => setIsProjetsOpen(false)}
                 className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm font-semibold text-white/85 transition-colors hover:bg-white/10 hover:text-white"
               >
@@ -303,7 +303,7 @@ const Navbar = () => {
                 {PROJETS.map((projet) => (
                   <NavLink
                     key={`mobile-projet-${projet.title}`}
-                    to={`/realisation#${slugify(projet.title)}`}
+                    to={projet.detailUrl ?? `/realisation#${slugify(projet.title)}`}
                     className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-medium text-white/65 transition-colors hover:bg-white/10 hover:text-white"
                   >
                     <FolderKanban className="h-3.5 w-3.5 shrink-0 text-white/40" />

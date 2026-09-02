@@ -83,7 +83,7 @@ const Realisation = () => {
                   <th className="px-5 py-3 font-semibold">Projet</th>
                   <th className="px-5 py-3 font-semibold">Catégorie</th>
                   <th className="px-5 py-3 font-semibold">Technologies</th>
-                  <th className="px-5 py-3 font-semibold">Rôle</th>
+                  <th className="px-5 py-3 font-semibold">contexte</th>
                   <th className="px-5 py-3 font-semibold">Année</th>
                 </tr>
               </thead>
