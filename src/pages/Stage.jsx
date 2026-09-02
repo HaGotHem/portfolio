@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { fadeInUp } from "@/lib/animations";
 
 const Stage = () => (
@@ -26,8 +27,15 @@ const Stage = () => (
           </span>
         </h2>
         <p className="mb-4 text-sm leading-relaxed text-[rgba(232,229,223,0.75)]">
-          texte a remplir
+              Stage de 1re année chez EXOCOMS GROUP, du 13 juillet au 7 août 2026. Société d'infogérance, de cybersécurité et de télécommunications,
+              au sein de laquelle j'ai été affecté au pôle informatique sur un projet de site vitrine développé en équipe de quatre.
         </p>
+        <Link
+          to="/stage-presentation"
+          className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[rgba(120,243,210,0.35)] px-3.5 py-1.5 text-xs text-[#78f3d2] transition-colors duration-200 hover:border-[rgba(120,243,210,0.6)] hover:bg-[rgba(120,243,210,0.08)]"
+        >
+          Voir la présentation
+        </Link>
       </motion.div>
     </div>
     </container>
