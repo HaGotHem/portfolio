@@ -12,6 +12,7 @@ const TabSkill = lazy(() => import("./pages/TabSkill.jsx"));
 const CV = lazy(() => import("./pages/CV.jsx"));
 const Veille = lazy(() => import("./pages/Veille.jsx"));
 const CRMVolley = lazy(() => import("./pages/CRM-volley.jsx"));
+const StagePresentation = lazy(() => import("./pages/StagePresentation.jsx"));
 
 const App = () => (
   <BrowserRouter>
@@ -35,6 +36,10 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/stage" element={<Stage />} />
+              <Route
+                path="/stage-presentation"
+                element={<StagePresentation />}
+              />
               <Route path="/contact" element={<Contact />} />
               <Route path="/realisation" element={<Realisation />} />
               <Route path="/tabskill" element={<TabSkill />} />
