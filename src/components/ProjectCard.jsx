@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { fadeInUp } from "@/lib/animations";
 import { slugify } from "@/lib/utils";
@@ -6,7 +7,7 @@ import TechTags from "@/components/TechTags";
 // Carte d'un projet, réutilisée sur les pages Projets/Stage et Réalisations.
 // Le projet "mis en avant" (featured) occupe toute la largeur et a un style distinct.
 const ProjectCard = ({ project, index = 0 }) => {
-  const { title, desc, tech, category, year, featured, linked, url, urlrepo } = project;
+  const { title, desc, tech, category, year, featured, linked, url, urlrepo, detailUrl } = project;
 
   return (
     <motion.article
@@ -69,6 +70,14 @@ const ProjectCard = ({ project, index = 0 }) => {
             >
               Voir la page
             </a>
+          )}
+          {detailUrl && (
+            <Link
+              to={detailUrl}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(120,243,210,0.35)] px-3.5 py-1.5 text-xs text-[#78f3d2] transition-colors duration-200 hover:border-[rgba(120,243,210,0.6)] hover:bg-[rgba(120,243,210,0.08)]"
+            >
+              Voir plus
+            </Link>
           )}
         </div>
       )}

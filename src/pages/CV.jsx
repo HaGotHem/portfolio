@@ -1,5 +1,12 @@
 import { motion } from "motion/react";
-import { Download, GraduationCap, Briefcase, Code2, Globe, Sparkles } from "lucide-react";
+import {
+  Download,
+  GraduationCap,
+  Briefcase,
+  Code2,
+  Globe,
+  Sparkles,
+} from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
 import TechTags from "@/components/TechTags";
 
@@ -27,10 +34,21 @@ const FORMATION = [
 ];
 
 const SKILLS = [
-  "HTML / CSS", "JavaScript", "TailwindCSS", "Bootstrap",
-  "PHP", "Python", "React", "React Native",
-  "Git", "GitHub", "Docker", "Linux",
-  "PowerShell", "GLPI", "Suite Office",
+  "HTML / CSS",
+  "JavaScript",
+  "TailwindCSS",
+  "Bootstrap",
+  "PHP",
+  "Python",
+  "React",
+  "React Native",
+  "Git",
+  "GitHub",
+  "Docker",
+  "Linux",
+  "PowerShell",
+  "GLPI",
+  "Suite Office",
 ];
 
 const LANGUES = [
@@ -39,10 +57,7 @@ const LANGUES = [
   { lang: "Espagnol", level: "A2" },
 ];
 
-const INTERETS = [
-  "Sports mécaniques",
-  "Aéronautique",
-];
+const INTERETS = ["Sports mécaniques", "Aéronautique"];
 
 const QUALITES = [
   "Travail sous pression",
@@ -135,11 +150,11 @@ const CV = () => (
             <div className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/18" />
             <div>
               <h3 className="mb-1 text-sm font-semibold text-[rgba(232,229,223,0.78)]">
-                En recherche d&apos;un stage
+                A réalisé un stage de 4 semaines en développement web
               </h3>
               <p className="text-sm leading-relaxed text-[rgba(232,229,223,0.8)]">
-                Stage de 4 semaines en développement web — disponible entre
-                juillet et août 2026.
+                Stage de 4 semaines en développement web — réalisé du 13/07/2026
+                au 07/08/2026
               </p>
             </div>
           </div>
