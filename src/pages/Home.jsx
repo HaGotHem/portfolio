@@ -40,14 +40,14 @@ de nature.`}
 
           <aside className="home-hero__bio">
             <p>
-              <strong>Thomas Bertacchi</strong> - étudiant en première année de
+              <strong>Thomas Bertacchi</strong> - étudiant en deuxième année de
               BTS SIO option SLAM à Mediaschool Nice. Passionné par le
               développement web, les sports mécaniques et l&apos;aéronautique.
             </p>
             <p>
               Actuellement à la recherche d'un{" "}
-              <strong>stage de 4 semaines</strong> entre{" "}
-              <strong>juillet et août 2026</strong> pour mettre en pratique mes
+              <strong>stage de 6 semaines</strong> entre{" "}
+              <strong>janvier et février 2027</strong> pour mettre en pratique mes
               compétences et acquérir une première expérience professionnelle.
             </p>
           </aside>
